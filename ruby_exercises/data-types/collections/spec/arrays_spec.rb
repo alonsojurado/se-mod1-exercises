@@ -187,7 +187,7 @@ puts some_vowels
     # Call a method on the dice variable to get a random element out
     # of the array
     roll = dice.sample
-    puts roll
+    puts roll 
     expect(roll <= 6).to eq(true)
     expect(roll >= 1).to eq(true)
     # Note, this assertion assumes the Ruby Version is 2.4 or higher.
