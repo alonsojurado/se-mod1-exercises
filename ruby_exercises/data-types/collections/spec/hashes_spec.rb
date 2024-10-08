@@ -1,13 +1,13 @@
 RSpec.describe 'Hashes' do
   it 'test 1' do
     # In the line below, create a new empty hash called empty
-    empty = ______
+    empty = {}______
     expect(empty).to eq({})
   end
 
   xit 'test 2' do
     # In the line below, create an empty hash with a default value 0
-    empty = ______
+    empty = Hash.new(0) ______
     expect(empty[:not_found]).to eq(0)
   end
 
@@ -15,7 +15,7 @@ RSpec.describe 'Hashes' do
     # In the line below, create a hash called ages. The hash should
     # have a key of "ben" with a value of 4 and a key of "kelly" with
     # a value of 6
-    ages = ______
+    ages = {"ben" => 4, "kelly" => 6}______
     expect(ages.length).to eq(2)
     expect(ages["ben"]).to eq(4)
     expect(ages["kelly"]).to eq(6)
@@ -25,14 +25,14 @@ RSpec.describe 'Hashes' do
     # In the line below, create a hash called ages. The hash should
     # have a key of :ben with a value of 4 and a key of :kelly with
     # a value of 6.
-    ages = ______
+    ages = {ben: 4, kelly: 6}______
     expect(ages.length).to eq(2)
     expect(ages[:ben]).to eq(4)
     expect(ages[:kelly]).to eq(6)
 
     # There are two different syntaxes for doing this. Use the other way to
     # achieve the same result
-    ages = ______
+    ages ={ :ben => 4, :kelly =>6} ______
     expect(ages.length).to eq(2)
     expect(ages[:ben]).to eq(4)
     expect(ages[:kelly]).to eq(6)
@@ -41,7 +41,7 @@ RSpec.describe 'Hashes' do
   xit 'test 5' do
     # In the line below, create a new hash called ingredients.
     # Create a "tomatoes" key and a :carrots key with the corresponding values.
-    ingredients = ______
+    ingredients = {"tomatoes" => 3, :carrots => 7} ______
 
     expect(ingredients["tomatoes"]).to eq(3)
     expect(ingredients[:carrots]).to eq(7)
@@ -50,7 +50,7 @@ RSpec.describe 'Hashes' do
   xit 'test 6' do
     # In the line below, create a new hash with
     # default values of zero.
-    ingredients = ______
+    ingredients = Hash.new(0)______
 
     expect(ingredients["tomatoes"]).to eq(0)
     expect(ingredients[:carrots]).to eq(0)
@@ -63,7 +63,8 @@ RSpec.describe 'Hashes' do
     }
     # Using the books hash defined above,
     # access the value "Grapes of Wrath"  in the line below
-    grapes = ______
+    grapes = books["John Steinbeck"]______
+    puts grapes
     expect(grapes).to eq("Grapes of Wrath")
   end
 
@@ -76,7 +77,8 @@ RSpec.describe 'Hashes' do
     # add a new key of "Ernest Hemmingway"
     # with a value of "For Whom the Bell Tolls"
     # in the line below
-    ______
+    ["Ernest Hemmingway"] = "For Whom the Bell Tolls"______
+    puts books
     expected = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird",
@@ -93,7 +95,7 @@ RSpec.describe 'Hashes' do
     # Using the books hash defined above,
     # change the value associated with
     # "John Steinbeck" to "Of Mice and Men"
-    ______
+    ["John Steinbeck"] = "Of Mice and Men"______
     expected = {
       "John Steinbeck" => "Of Mice and Men",
       "Harper Lee" => "To Kill a Mockingbird"
